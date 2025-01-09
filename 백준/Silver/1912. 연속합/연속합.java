@@ -6,25 +6,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
 	
 	
 	
 	public static void main(String args[]) throws NumberFormatException, IOException {
-//		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 //		BufferedWriter bw= new BufferedWriter(new OutputStreamWriter(System.out));
-//		int n= Integer.parseInt(br.readLine());
 		
-		Scanner in = new Scanner(System.in);
+		int n= Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = in.nextInt();
+//		Scanner in = new Scanner(System.in);
+		
+		//int n = in.nextInt();
 		
 		int[] array=new int[n];
 		int[] sumArray=new int[n];
 		
 		for(int i=0;i<n;i++)
-			array[i]= in.nextInt();
+			//array[i]= in.nextInt();
+			array[i]= Integer.parseInt(st.nextToken());
 		
 		sumArray[0]= array[0];
 		for(int i=1;i<n;i++) {
